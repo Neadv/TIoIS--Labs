@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "Lab1Client";
+
+package calculation;
+
+service Calculator {
+  rpc CalculateSumBetween (CalculationRequest) returns (CalculationReply);
+}
+
+message CalculationRequest {
+  int32 from = 1;
+  int32 to = 2;
+}
+
+message CalculationReply {
+  int32 sum = 1;
+}

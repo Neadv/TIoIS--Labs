@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Employee>
+
+<div>
+    <h1>Employee List</h1>
+    <div class="d-flex justify-content-between">
+        <div><b>Total count: @Model.Count()</b></div>
+        <a asp-action="Create" class="btn btn-primary">Create new Employee</a>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Date of Employment</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+                <tr>
+                    <th scope="row">@employee.EmployeeId</th>
+                    <td>@employee.FirstName</td>
+                    <td>@employee.LastName</td>
+                    <td>@employee.DateOfEmployment.ToString("dd.MM.yyyy")</td>
+                    <td>
+                        <div class="d-flex">
+                            <a asp-action="Edit" asp-route-id="@employee.EmployeeId" class="btn btn-sm btn-outline-secondary me-2">Edit</a>
+                            <form asp-action="Delete" asp-antiforgery="true">
+                                <input type="hidden" name="id" value="@employee.EmployeeId">
+                                <input type="submit" class="btn btn-sm btn-outline-danger" value="Delete">
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

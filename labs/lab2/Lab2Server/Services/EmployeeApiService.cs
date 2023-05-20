@@ -80,7 +80,7 @@ public class EmployeeApiService: EmployeeService.EmployeeServiceBase
             EmployeeId = employee.EmployeeId,
             FirstName = employee.FirstName,
             LastName = employee.LastName,
-            DateOfEmployment = employee.DateOfEmployment.ToTimestamp()
+            DateOfEmployment = employee.DateOfEmployment.ToUniversalTime().ToTimestamp()
         };
     }
 }

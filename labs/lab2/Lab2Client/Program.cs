@@ -1,6 +1,10 @@
+using Lab2Client.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IEmployeeApiService, EmployeeApiService>();
 
 var app = builder.Build();
 

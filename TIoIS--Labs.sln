@@ -18,9 +18,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab1Client", "labs\lab1\cli
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lab2", "lab2", "{DBE86556-60E9-4BA4-A907-34EAA752F0ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2Server", "labs\lab2\Lab2Server\Lab2Server.csproj", "{A9571B8E-FADA-4CFF-813F-968DB3A88228}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab2Server", "labs\lab2\Lab2Server\Lab2Server.csproj", "{A9571B8E-FADA-4CFF-813F-968DB3A88228}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2Client", "labs\lab2\Lab2Client\Lab2Client.csproj", "{FBA410A9-13F4-4AE2-900A-5C8F6863EBBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab2Client", "labs\lab2\Lab2Client\Lab2Client.csproj", "{FBA410A9-13F4-4AE2-900A-5C8F6863EBBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
